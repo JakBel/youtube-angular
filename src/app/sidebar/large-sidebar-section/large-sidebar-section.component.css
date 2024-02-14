@@ -1,0 +1,21 @@
+.title {
+  margin-bottom: 0.25rem;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.extended {
+  display: flex;
+  padding: 0.75rem;
+  gap: 1rem;
+  align-items: center;
+  border-radius: 0.5rem;
+  width: 100%;
+  border: none;
+}
+
+.extended:hover {
+  background-color: rgb(215, 215, 215);
+}

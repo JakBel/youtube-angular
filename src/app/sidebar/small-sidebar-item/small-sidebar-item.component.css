@@ -1,0 +1,17 @@
+a {
+  display: flex;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 0.55rem;
+  padding-bottom: 0.55rem;
+  overflow: hidden;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: center;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: #030303;
+}
+a:hover {
+  background-color: #f3f3f3;
+}

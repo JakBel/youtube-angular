@@ -1,0 +1,35 @@
+.sidebar__small {
+  display: none;
+  overflow-y: auto;
+  height: 100%;
+  position: sticky;
+  top: 0;
+  padding-bottom: 1rem;
+  margin-left: 0.25rem;
+  flex-direction: column;
+}
+
+.sidebar__large {
+  display: flex;
+  overflow-y: auto;
+  position: absolute;
+  position: sticky;
+  top: 0;
+  height: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 1rem;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 14rem;
+}
+
+@media screen and (max-width: 675px) {
+  .sidebar__small {
+    display: flex;
+  }
+
+  .sidebar__large {
+    display: none;
+  }
+}

@@ -1,0 +1,29 @@
+<div class="sidebar">
+  <aside class="sidebar__small">
+    @for (icon of smallIcons; track $index) {
+    <app-small-sidebar-item
+      [icon]="{ Icon: icon.Icon, title: icon.title, url: icon.url }"
+    ></app-small-sidebar-item>
+    }
+  </aside>
+  <aside class="sidebar__large">
+    <app-large-sidebar-section [icons]="mainIcons"></app-large-sidebar-section>
+    <div
+      [ngStyle]="{ 'border-bottom': 1 + 'px solid rgb(135, 135, 135)' }"
+    ></div>
+    <app-large-sidebar-section
+      [title]="'You  >'"
+      [visibleItemCount]="5"
+      [icons]="userIcons"
+    ></app-large-sidebar-section>
+    <div
+      [ngStyle]="{ 'border-bottom': 1 + 'px solid rgb(135, 135, 135)' }"
+    ></div>
+    <app-large-sidebar-section
+      [title]="'Subscriptions'"
+      [visibleItemCount]="6"
+      [icons]="subsIcons"
+      [isPhoto]="true"
+    ></app-large-sidebar-section>
+  </aside>
+</div>

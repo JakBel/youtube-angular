@@ -1,0 +1,25 @@
+<div>
+  <div class="title" *ngIf="title">{{ title }}</div>
+  <!-- Show icons -->
+  @for (icon of visibleSidebarItems; track $index) {
+  <app-large-sidebar-item
+    [icon]="{
+      Icon: icon.Icon,
+      title: icon.title,
+      url: icon.url,
+      isActive: icon.isActive
+    }"
+    [photoDetected]="photoDetected"
+  ></app-large-sidebar-item>
+  }
+  <!-- Show expand button -->
+  @if (showExpandButton) {
+  <button class="extended" (click)="setExpanded()">
+    <mat-icon
+      [fontIcon]="buttonIcon"
+      [ngStyle]="{ width: 1.5 + 'rem', height: 1.5 + 'rem' }"
+    ></mat-icon>
+    <div>{{ expanded() ? "Show less" : "Show more" }}</div>
+  </button>
+  }
+</div>

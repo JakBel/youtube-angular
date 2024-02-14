@@ -1,0 +1,56 @@
+<div class="header">
+  <!-- Logo -->
+  @if (showFullWidth() === false || windowWidth > 675) {
+  <div class="header-logo">
+    <button mat-icon-button>
+      <mat-icon aria-hidden="false" color="primary">menu</mat-icon>
+    </button>
+    <a href="/">
+      <img src="assets/Logo.png" alt="AngularTube logo" class="h-6" />
+    </a>
+  </div>
+  }
+  <!-- Searching -->
+  @if (showFullWidth() === true || windowWidth > 675) {
+  <form action="" class="search-form">
+    <div class="search-bar">
+      @if (showFullWidth() === true && windowWidth < 675) {
+      <button mat-icon-button (click)="showFullWidthSearch(false)">
+        <mat-icon aria-hidden="false">arrow_back</mat-icon>
+      </button>
+      }
+      <input matInput type="search" placeholder="Search" class="search-input" />
+      <button class="search-bar__icon-search">
+        <mat-icon aria-hidden="false">search</mat-icon>
+      </button>
+    </div>
+    <button mat-icon-button type="button">
+      <mat-icon aria-hidden="false">mic</mat-icon>
+    </button>
+  </form>
+  }
+  <!-- Icons -->
+  @if (showFullWidth() === false || windowWidth > 675) {
+  <div class="icons">
+    <button
+      mat-icon-button
+      class="icons-search"
+      (click)="showFullWidthSearch(true)"
+    >
+      <mat-icon aria-hidden="false" color="primary">search</mat-icon>
+    </button>
+    <button mat-icon-button class="icons-search">
+      <mat-icon aria-hidden="false" color="primary">mic</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon aria-hidden="false" color="primary">upload</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon aria-hidden="false" color="primary">notifications</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon aria-hidden="false" color="primary">person</mat-icon>
+    </button>
+  </div>
+  }
+</div>

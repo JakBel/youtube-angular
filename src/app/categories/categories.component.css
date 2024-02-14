@@ -1,0 +1,63 @@
+.categories {
+  overflow-x: hidden;
+  position: relative;
+}
+
+.categories-box {
+  display: flex;
+  gap: 0.75rem;
+  height: 25px;
+  margin-top: 10px;
+  white-space: nowrap;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  width: max-content;
+}
+.category-box__button {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  border-radius: 0.5rem;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  background-color: #f2f2f2;
+  transition: 900ms;
+}
+.category-box__button:hover {
+  transition: 900ms;
+  background-color: #030303;
+  color: #fff;
+}
+
+.categories-box .selected {
+  background-color: #030303;
+  color: #fff;
+}
+
+.arrow-button {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 60px;
+  height: 25px;
+  border: none;
+  position: absolute;
+  z-index: 10;
+}
+.arrow-button:hover {
+  cursor: pointer;
+}
+.arrow-left {
+  left: 0;
+  justify-content: flex-start;
+  background: linear-gradient(90deg, white 70%, transparent 100%);
+}
+.arrow-right {
+  right: 0;
+  justify-content: flex-end;
+  background: linear-gradient(270deg, white 70%, transparent 100%);
+}

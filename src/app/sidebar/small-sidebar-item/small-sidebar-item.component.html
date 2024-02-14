@@ -1,0 +1,9 @@
+<a [href]="icon.url">
+  <mat-icon
+    [fontIcon]="icon.Icon"
+    [ngStyle]="{ width: 1.5 + 'rem', height: 1.5 + 'rem' }"
+  ></mat-icon>
+  <div [ngStyle]="{ 'font-size': 0.875 + 'rem', 'line-height': 1.25 + 'rem' }">
+    {{ icon.title }}
+  </div>
+</a>

@@ -1,0 +1,26 @@
+<a [href]="icon.url" [ngClass]="{ active: icon.isActive }">
+  @if (photoDetected === undefined) {
+  <mat-icon
+    [fontIcon]="icon.Icon"
+    [ngStyle]="{ width: 1.5 + 'rem', height: 1.5 + 'rem' }"
+  ></mat-icon>
+  } @else {
+  <img
+    [src]="icon.Icon"
+    [ngStyle]="{
+      width: 1.5 + 'rem',
+      height: 1.5 + 'rem',
+      'border-radius': 30 + 'px'
+    }"
+  />
+  }
+  <div
+    [ngStyle]="{
+      overflow: 'hidden',
+      'text-overflow': 'ellipsis',
+      'white-space': 'nowrap'
+    }"
+  >
+    {{ icon.title }}
+  </div>
+</a>

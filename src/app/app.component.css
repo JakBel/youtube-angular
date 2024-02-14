@@ -1,0 +1,33 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.sidebar {
+  overflow-x: hidden;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+}
+
+.categories {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding-bottom: 1rem;
+  background-color: #fff;
+}
+
+.video {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}

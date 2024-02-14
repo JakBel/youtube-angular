@@ -1,0 +1,18 @@
+<div class="categories" #categoryInfo>
+  <div class="categories-box">
+    @if (isLeftVisible() === true) {
+    <button class="arrow-button arrow-left" (click)="translateLeft()"><</button>
+    } @for (cat of categories; track $index) {
+    <button
+      class="category-box__button"
+      [ngStyle]="{ transform: 'translateX(-' + translate() + 'px)' }"
+      [ngClass]="{ selected: index === $index }"
+      (click)="selectedButton($index)"
+    >
+      {{ cat }}
+    </button>
+    } @if (isRightVisible() === true) {
+    <button class="arrow-button arrow-right" (click)="translateRight()">></button>
+    }
+  </div>
+</div>

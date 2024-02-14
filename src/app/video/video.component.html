@@ -1,0 +1,45 @@
+<div
+  class="video"
+  (mouseenter)="videoPlaying.set(true)"
+  (mouseleave)="videoPlaying.set(false)"
+>
+  <a [href]="'/watch?v=' + video.id" class="video__link">
+    <img
+      [src]="video.thumbnailUrl"
+      class="video__image"
+      [ngStyle]="{
+        'border-radius': videoPlaying() === true ? 0 : 0.55 + 'rem'
+      }"
+    />
+    <div class="video__time">
+      {{ formatTimeDuration(video.duration) }}
+    </div>
+    <video
+      [src]="video.videoUrl"
+      muted
+      playsInline
+      #videoRef
+      [ngStyle]="{
+        opacity: videoPlaying() === true ? 1 : 0,
+        'transition-delay': 200 + 'ms'
+      }"
+    ></video>
+  </a>
+  <div class="video__bottom">
+    <a [href]="'/@' + video.channel.id" style="flex-shrink: 0">
+      <img [src]="video.channel.profileUrl" class="video__bottom-image" />
+    </a>
+    <div style="display: flex; flex-direction: column">
+      <a [href]="'/watch?v=' + video.id" class="video__bottom-title">
+        {{ video.title }}
+      </a>
+      <a [href]="'/@' + video.channel.id" class="video__bottom-channel">
+        {{ video.channel.name }}
+      </a>
+      <div class="video__bottom-channel">
+        {{ VIEW_FORMATTER.format(video.views) }} views ●
+        {{ formatTimeAgo(video.postedAt) }}
+      </div>
+    </div>
+  </div>
+</div>
